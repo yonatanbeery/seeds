@@ -2,8 +2,8 @@ import React from 'react';
 import leaf_logo from "../../images/leaf logo.png";
 import "../../css/App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-//<img src={leaf_logo} id="logo"/>
-  export default class App extends React.Component {
+
+export default class App extends React.Component {
     render() {
         return (
             <all class="text-center" id="allPage">
@@ -16,9 +16,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
             </div>
             <h1 class="cover-heading">start here.</h1>
             <p class="lead">
-              <a href="/sdasdsad" class="btn btn-lg btn-secondary">build</a>
-              <a href="/sdasdsad" class="btn btn-lg btn-secondary">deploy</a>
-              <a href="/sdasdsad" class="btn btn-lg btn-secondary">both?!</a>
+              <a href="/build" class="btn btn-lg btn-secondary">build</a>
+              <a href="/deploy" class="btn btn-lg btn-secondary">deploy</a>
+              <a href="/both" class="btn btn-lg btn-secondary">both?!</a>
             </p>
           </main>
         

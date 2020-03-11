@@ -1,0 +1,31 @@
+#All {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background: rgb(87, 87, 87);
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.col-5, .col-7 {
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 15px;
+}
+
+.api {
+    background-color: #ffffff;
+}
+
+.leftComponent {
+    padding-left: 25px;
+}
+
+.rightComponent {
+    padding-right: 25px;
+}

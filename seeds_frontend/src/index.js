@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MainPage from "./js/components/MainPage";
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MainPage from "./js/components/MainPage";
+import Build from "./js/components/Build";
+import Deploy from "./js/components/Deploy";
+import Both from "./js/components/Both";
 
 const routing = (
   <Router>
     <div>
       <Route exact path="/" component={MainPage} />
+      <Route path="/Build" component={Build} />
+      <Route path="/Deploy" component={Deploy} />
+      <Route path="/Both" component={Both} />
     </div>
   </Router>
 )

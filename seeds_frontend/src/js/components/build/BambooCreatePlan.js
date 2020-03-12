@@ -1,6 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../../css/build.css"
+import "../../../css/Travel.css";
+import Continue from "../travel/Continue";
 
 export default class BambooCreatePlan extends React.Component {
     render() {
@@ -12,9 +14,9 @@ export default class BambooCreatePlan extends React.Component {
           <h3 class="mb-0">Featured post</h3>
           <div class="mb-1 text-muted">Nov 12</div>
           <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
         </div>
       </div>
+      <Continue/>
 </div>
         );
     }

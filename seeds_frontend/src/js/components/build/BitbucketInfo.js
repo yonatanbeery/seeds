@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../../../css/build.css"
+import "../../../css/build.css";
+import "../../../css/Travel.css";
 import Backwards from "../travel/Backwards";
 
 export default class BitbucketInfo extends React.Component {
@@ -12,8 +13,8 @@ export default class BitbucketInfo extends React.Component {
           <h3 class="mb-0">Featured post</h3>
           <div class="mb-1 text-muted">Nov 12</div>
           <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <Backwards/>
       </div>
+      <Backwards/>
 </div>
         );
     }

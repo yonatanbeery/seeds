@@ -5,7 +5,7 @@ import "../../../css/build.css";
 function Backwards() {
 
     return (
-        <button type="button" class="btn btn-danger"><SkipStart size={30}/></button>
+        <button type="button" class="btn btn-danger" id="Backwards"><SkipStart size={30}/></button>
     );
 }
 export default Backwards;

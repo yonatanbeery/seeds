@@ -8,10 +8,10 @@ export default class Build extends React.Component {
     render() {
         return (
             <div class="container-fluid main">
-                <div class="row">
-                <div class="col-5"><BitbucketInfo/></div>
+            <div class="row" id="dontfloat">
+            <div class="col-5"><BitbucketInfo/></div>
                 <div class="col-7"><BambooCreatePlan/></div>
-                </div>
+            </div>
             </div>
         );
     }

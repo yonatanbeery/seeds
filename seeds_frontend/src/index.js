@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux'
+import store from './js/store/store.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainPage from "./js/components/MainPage";
 import Build from "./js/components/Build";
@@ -18,4 +20,8 @@ const routing = (
   </Router>
 )
 
-ReactDOM.render(routing, document.getElementById('root'))
+ReactDOM.render(
+  <Provider store={store}>
+    {routing}
+  </Provider>, 
+  document.getElementById('root'))

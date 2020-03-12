@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../../css/build.css"
+import "../../../css/build.css"
 
 export default class BambooCreatePlan extends React.Component {
     render() {

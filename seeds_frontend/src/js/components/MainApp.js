@@ -12,7 +12,7 @@ export default class MainApp extends React.Component {
         
           <main role="main" class="inner cover">
           <div class="inner">
-              <img src={leaf_logo} id="logo"/>
+              <img alt="leaf_logo" src={leaf_logo} id="logo"/>
             </div>
             <h1 class="cover-heading">start here.</h1>
             <p class="lead">
@@ -21,7 +21,7 @@ export default class MainApp extends React.Component {
               <a href="/both" class="btn btn-lg btn-secondary">both?!</a>
             </p>
           </main>
-        
+          
           <footer class="mastfoot mt-auto">
             <div class="inner">
             </div>

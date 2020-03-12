@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../../css/build.css"
 import BitbucketInfo from "./build/BitbucketInfo";
 import BambooCreatePlan from "./build/BambooCreatePlan";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 export default class Build extends React.Component {
     render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import store from './js/store/store.js'
 import 'bootstrap/dist/css/bootstrap.min.css';

@@ -1,7 +1,7 @@
 import React from 'react';
 import "../../css/LoadingPage.css";
 import logo_gif from "../../images/welcom_logo.gif";
-import App from "./App";
+import MainApp from "./MainApp";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
   export default class MainPage extends React.Component {
@@ -26,7 +26,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
           <div class="loader-section section-right"></div>
         </div>
         <div id="App">
-        <App />
+        <MainApp />
         </div>
         </div>
         );

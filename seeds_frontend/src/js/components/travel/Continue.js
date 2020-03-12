@@ -5,7 +5,7 @@ import "../../../css/build.css";
 function Continue() {
 
     return (
-        <button type="button" class="btn btn-primary" id="Continue"><SkipEnd size={30}/></button>
+        <a href="/" type="button" class="btn btn-primary" id="Continue"><SkipEnd size={30}/></a>
     );
 }
 export default Continue;

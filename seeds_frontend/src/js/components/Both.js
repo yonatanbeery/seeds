@@ -5,7 +5,7 @@ export default class Both extends React.Component {
     render() {
         return (
             <div>
-                hello world from build page
+                hello world from Both page
             </div>
         );
     }

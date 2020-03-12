@@ -1,9 +1,9 @@
 import React from 'react';
 import leaf_logo from "../../images/leaf logo.png";
-import "../../css/App.css";
+import "../../css/MainApp.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default class App extends React.Component {
+export default class MainApp extends React.Component {
     render() {
         return (
             <all class="text-center" id="allPage">

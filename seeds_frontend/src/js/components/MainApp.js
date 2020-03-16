@@ -1,9 +1,9 @@
 import React from 'react';
 import leaf_logo from "../../images/leaf logo.png";
-import "../../css/App.css";
+import "../../css/MainApp.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default class App extends React.Component {
+export default class MainApp extends React.Component {
     render() {
         return (
             <all class="text-center" id="allPage">
@@ -12,7 +12,7 @@ export default class App extends React.Component {
         
           <main role="main" class="inner cover">
           <div class="inner">
-              <img src={leaf_logo} id="logo"/>
+              <img alt="leaf_logo" src={leaf_logo} id="logo"/>
             </div>
             <h1 class="cover-heading">start here.</h1>
             <p class="lead">
@@ -21,7 +21,7 @@ export default class App extends React.Component {
               <a href="/both" class="btn btn-lg btn-secondary">both?!</a>
             </p>
           </main>
-        
+          
           <footer class="mastfoot mt-auto">
             <div class="inner">
             </div>

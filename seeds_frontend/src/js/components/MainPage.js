@@ -1,25 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "../../css/LoadingPage.css";
 import logo_gif from "../../images/welcom_logo.gif";
 import MainApp from "./MainApp";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-  export default class MainPage extends React.Component {
-    state = {
-      isLoaded: false
-    }
+  export default function MainPage() {
+    const [isLoaded, setLoaded] = useState(false);
     
-    componentDidMount() {
-      this.id = setTimeout(() => this.setState({ isLoaded: true }), 1500)
-    }
+    useEffect(() => {
+      setTimeout(() => setLoaded(true), 1500)
+    });
 
-    componentWillUnmount() {
-      clearTimeout(this.id)
-    }
-
-    render() {
         return (
-        <div class={this.state.isLoaded ? "loaded": ""}>
+        <div class={isLoaded ? "loaded": ""}>
         <div id="loader-wrapper">
           <img alt="leaf_logo" src={logo_gif} id="loader"/>
           <div class="loader-section section-left"></div>
@@ -30,5 +23,4 @@ import 'bootstrap/dist/css/bootstrap.min.css';
         </div>
         </div>
         );
-    }
   }

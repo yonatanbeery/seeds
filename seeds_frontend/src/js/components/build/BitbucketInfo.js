@@ -5,8 +5,7 @@ import "../../../css/Travel.css";
 import Backwards from "../travel/Backwards";
 import Dropdown from "../travel/Dropdown";
 
-export default class BitbucketInfo extends React.Component {
-    render() {
+export default function BitbucketInfo () {
         return (
 <div class="container-fluid leftComponent">
     <div class="row no-gutters border rounded shadow-sm">
@@ -19,5 +18,4 @@ export default class BitbucketInfo extends React.Component {
       <Backwards/>
 </div>
         );
-    }
   }

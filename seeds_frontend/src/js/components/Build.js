@@ -4,8 +4,7 @@ import BitbucketInfo from "./build/BitbucketInfo";
 import BambooCreatePlan from "./build/BambooCreatePlan";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-export default class Build extends React.Component {
-    render() {
+export default function Build (){
         return (
             <div class="container-fluid main">
             <div class="row" id="dontfloat">
@@ -14,5 +13,4 @@ export default class Build extends React.Component {
             </div>
             </div>
         );
-    }
   }

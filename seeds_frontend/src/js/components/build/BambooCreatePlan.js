@@ -4,8 +4,7 @@ import "../../../css/build.css"
 import "../../../css/Travel.css";
 import Continue from "../travel/Continue";
 
-export default class BambooCreatePlan extends React.Component {
-    render() {
+export default function BambooCreatePlan () {
         return (
 <div class="container-fluid rightComponent">
       <div class="row no-gutters border rounded shadow-sm">
@@ -17,5 +16,4 @@ export default class BambooCreatePlan extends React.Component {
       <Continue/>
 </div>
         );
-    }
   }

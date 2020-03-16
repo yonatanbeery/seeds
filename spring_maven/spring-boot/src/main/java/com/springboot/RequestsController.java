@@ -3,7 +3,9 @@ package com.springboot;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bamboo_spec.PlanSpec;
+import com.bitbucket_api.BitbucketApi;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,10 +21,14 @@ public class RequestsController {
 	}
 	
 	@RequestMapping(value = "/bamboo/create/{projectName}/{planName}/{planKey}")
-	public String bamboo(@PathVariable("projectName") String projectName, 
+	public String createBambooPlan(@PathVariable("projectName") String projectName, 
 						 @PathVariable("planName") String planName, 
 						 @PathVariable("planKey") String planKey) throws Exception {
 		return PlanSpec.createPlan(projectName, planName, planKey);
 	}
-
+	
+	@RequestMapping("/bitbucket/allProjects")
+	public String[] bitbucketProjects() throws IOException {
+		return BitbucketApi.AllProjects();
+	}
 }

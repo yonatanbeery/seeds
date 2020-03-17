@@ -1,13 +1,14 @@
 import { takeEvery, call, put } from "redux-saga/effects";
 
 export default function* watcherSaga() {
-    yield takeEvery("DATA_REQUESTED", workerSaga);
+    yield takeEvery("GET_BITBUCKET_PROJECTS", workerSaga);
 }
 
 function* workerSaga(action) {
+    console.log(action);
     try{
         const payload = yield call(getData, action.payload.url);
-        yield put({type: "DATA_LOADED", payload});
+        yield put({type: "BITBUCKET_PROJECTS_LOADED", payload});
     } catch (e) {
         yield put({type: "API_ERRORED", payload: e});
     }

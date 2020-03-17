@@ -1,10 +1,9 @@
 import React from 'react';
-import leaf_logo from "../../images/leaf logo.png";
-import "../../css/MainApp.css";
+import leaf_logo from "../../../images/leaf logo.png";
+import "../../../css/MainApp.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default class MainApp extends React.Component {
-    render() {
+export default function MainApp () {
         return (
             <all class="text-center" id="allPage">
             <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -29,5 +28,4 @@ export default class MainApp extends React.Component {
         </div>
         </all>
         );
-    }
   }

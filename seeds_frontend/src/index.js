@@ -4,10 +4,11 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import store from './js/store/store.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MainPage from "./js/components/MainPage";
-import Build from "./js/components/Build";
+import MainPage from "./js/components/home/MainPage";
+import Build from "./js/components/build/Build";
 import Deploy from "./js/components/Deploy";
 import Both from "./js/components/Both";
+import index from "./js/index";
 
 const routing = (
   <Router>

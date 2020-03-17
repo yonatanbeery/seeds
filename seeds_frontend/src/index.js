@@ -8,6 +8,7 @@ import MainPage from "./js/components/home/MainPage";
 import Build from "./js/components/build/Build";
 import Deploy from "./js/components/Deploy";
 import Both from "./js/components/Both";
+import index from "./js/index";
 
 const routing = (
   <Router>

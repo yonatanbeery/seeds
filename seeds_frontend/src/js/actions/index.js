@@ -1,3 +1,9 @@
 export function getBitbucketProjects() {
-    return {type: "GET_BITBUCKET_PROJECTS", payload: {url:"http://localhost:8080/bitbucket/allProjects"}}
+    return function(dispatch) {
+        return fetch("http://localhost:8080/bitbucket/allProjects")
+        .then(response => response.json())
+        .then(json => {
+            dispatch({ type: "BITBUCKET_PROJECTS_LOADED", payload: json });
+        });
+    }
 }

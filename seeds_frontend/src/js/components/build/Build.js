@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BitbucketInfo from "./BitbucketInfo";
@@ -14,18 +14,19 @@ function mapStateToProps(state) {
 
   function mapDispatchToProps(dispatch) {
     return {
-        getBitbucketProjects: () => dispatch(getBitbucketProjects())
+        setBitbucketProjects: () => dispatch(getBitbucketProjects())
     };
   }
 
-function BuildComponent ({Projects}){
-    const [bitbucketProjects, changeBitbucketProjects] = useState(Projects);
-
+function BuildComponent ({Projects, setBitbucketProjects}){
+    useEffect(() => {
+        setBitbucketProjects()
+      },[]);
 
     return (
         <div class="container-fluid main">
         <div class="row" id="dontfloat">
-        <div class="col-5"><BitbucketInfo List={bitbucketProjects}/></div>
+        <div class="col-5"><BitbucketInfo List={Projects}/></div>
             <div class="col-7"><BambooCreatePlan/></div>
         </div>
         </div>

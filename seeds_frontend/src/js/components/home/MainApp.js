@@ -1,6 +1,6 @@
 import React from 'react';
-import leaf_logo from "../../images/leaf logo.png";
-import "../../css/MainApp.css";
+import leaf_logo from "../../../images/leaf logo.png";
+import "../../../css/MainApp.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function MainApp () {

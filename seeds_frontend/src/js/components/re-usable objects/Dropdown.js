@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Dropdown() {
-    const List = ['None','lapid', 'rakia', 'golden bell'];
+function Dropdown(props) {
+    const List = props.List;
     const ProjectsList = List.map((projectName) =>
    <option>{projectName}</option>
     );

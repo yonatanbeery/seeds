@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import "../../css/LoadingPage.css";
-import logo_gif from "../../images/welcom_logo.gif";
+import "../../../css/LoadingPage.css";
+import logo_gif from "../../../images/welcom_logo.gif";
 import MainApp from "./MainApp";
 import 'bootstrap/dist/css/bootstrap.min.css';
 

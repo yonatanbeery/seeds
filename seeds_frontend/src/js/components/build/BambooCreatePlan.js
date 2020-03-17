@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../../css/build.css"
 import "../../../css/Travel.css";
-import Continue from "../travel/Continue";
+import Continue from "../re-usable objects/Continue";
 
 export default function BambooCreatePlan () {
         return (

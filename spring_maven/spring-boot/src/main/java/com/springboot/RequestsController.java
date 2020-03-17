@@ -8,6 +8,7 @@ import com.bitbucket_api.BitbucketApi;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.Set;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,7 +42,7 @@ public class RequestsController {
 	
 	@CrossOrigin(origins = "*")
 	@RequestMapping("/frameworks/bitbucketTypes")
-	public String[] bitbucketProjectTypes() throws IOException {
+	public Set<String> bitbucketProjectTypes() throws IOException {
 		return bitbucketFramework.getTypes();
 	}
 	

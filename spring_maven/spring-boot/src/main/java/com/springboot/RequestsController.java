@@ -2,6 +2,7 @@ package com.springboot;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import com.api_frameworks.bitbucket;
 import com.bamboo_spec.PlanSpec;
 import com.bitbucket_api.BitbucketApi;
 
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class RequestsController {
 
+	private static bitbucket bitbucketFramework = new bitbucket();  
+	
 	@CrossOrigin(origins = "*")
 	@RequestMapping("/")
 	public String index() throws MalformedURLException {
@@ -35,4 +38,15 @@ public class RequestsController {
 	public String[] bitbucketProjects() throws IOException {
 		return BitbucketApi.AllProjects();
 	}
+	
+	@CrossOrigin(origins = "*")
+	@RequestMapping("/frameworks/bitbucketTypes")
+	public String[] bitbucketProjectTypes() throws IOException {
+		return bitbucketFramework.getTypes();
+	}
+	
+	
+	
+	
+	
 }

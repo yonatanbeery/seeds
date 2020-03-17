@@ -4,23 +4,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import BitbucketInfo from "./BitbucketInfo";
 import BambooCreatePlan from "./BambooCreatePlan";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { getBitbucketProjects } from "../../actions/index";
+import { getBitbucketProjectsTypes } from "../../actions/index";
 
 function mapStateToProps(state) {
     return {
-        Projects: state.bitbucketProjects
+        Projects: state.projectTypes
     };
   }
 
   function mapDispatchToProps(dispatch) {
     return {
-        setBitbucketProjects: () => dispatch(getBitbucketProjects())
+        setProjectsTypes: () => dispatch(getBitbucketProjectsTypes())
     };
   }
 
-function BuildComponent ({Projects, setBitbucketProjects}){
+function BuildComponent ({Projects, setProjectsTypes}){
     useEffect(() => {
-        setBitbucketProjects()
+      setProjectsTypes()
       },[]);
 
     return (

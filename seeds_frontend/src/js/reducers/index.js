@@ -1,5 +1,6 @@
 const initialState = {
-    bitbucketProjects: ["None"]
+    bitbucketProjects: ["None"],
+    projectTypes: []
 };
 
 function rootReducer(state = initialState, action) {
@@ -7,6 +8,10 @@ function rootReducer(state = initialState, action) {
         let defaultOptions = ["None"];
         return Object.assign({}, state, {
             bitbucketProjects: defaultOptions.concat(action.payload)
+          });
+    } else if (action.type === "BITBUCKET_PROJECTS_TYPES_LOADED") {
+        return Object.assign({}, state, {
+            projectTypes: action.payload
           });
     }
     return state;

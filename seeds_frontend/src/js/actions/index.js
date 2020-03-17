@@ -7,3 +7,13 @@ export function getBitbucketProjects() {
         });
     }
 }
+
+export function getBitbucketProjectsTypes() {
+    return function(dispatch) {
+        return fetch("http://localhost:8080/frameworks/bitbucketTypes")
+        .then(response => response.json())
+        .then(json => {
+            dispatch({ type: "BITBUCKET_PROJECTS_TYPES_LOADED", payload: json });
+        });
+    }
+}

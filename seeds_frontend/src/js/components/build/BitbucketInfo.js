@@ -11,7 +11,7 @@ export default function BitbucketInfo (props) {
     <div class="row no-gutters border rounded shadow-sm">
         <div class="col p-4 flex-column api">
         <strong class="text-primary">Bitbucket</strong>
-          <p class="card-text mb-auto">here will be the bitbucket api, searching for project and branch to create plan for</p>
+          <p class="card-text mb-auto">choose a project type</p>
           <Dropdown List={props.List}/>
       </div>
       </div>

@@ -46,6 +46,18 @@ public class RequestsController {
 		return bitbucketFramework.getTypes();
 	}
 	
+	@CrossOrigin(origins = "*")
+	@RequestMapping("/bitbucket/newPlan/{projectName}/{planName}/{PlanTypeName}")
+	public String newBitbucketPlan(@PathVariable("projectName") String projectName, 
+			 @PathVariable("planName") String planName, 
+			 @PathVariable("PlanTypeName") String PlanTypeName) throws IOException {
+		if (bitbucketFramework.createPlan(projectName, planName, PlanTypeName)) {
+			return "success";
+		} else {
+			return PlanTypeName + " creation failed";
+		}
+	}
+	
 	
 	
 	

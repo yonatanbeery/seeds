@@ -15,6 +15,6 @@ public class bitbucket {
 	}
 	
 	public boolean createPlan(String ProjectName, String planName, String PlanTypeName) {
-		return planTypes.get(PlanTypeName).newPlan(ProjectName, planName, PlanTypeName);
+		return planTypes.get(PlanTypeName).newPlan(ProjectName, planName);
 	}
 }

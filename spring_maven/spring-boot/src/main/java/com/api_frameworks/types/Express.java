@@ -5,7 +5,7 @@ import com.api_frameworks.planType;;
 public class Express implements planType{
 
 	@Override
-	public boolean newPlan(String ProjectName, String planName, String PlanType) {
+	public boolean newPlan(String ProjectName, String planName) {
 		// TODO Auto-generated method stub
 		return false;
 	}

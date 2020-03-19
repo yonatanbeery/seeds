@@ -29,6 +29,7 @@ const setPlanTypes = () => {
     planTypesMap.set("Nodejs", "nodejs");
 };
 
+setPlanTypes();
 allProjects((err, data) => {
     data.forEach(project => {
         projectKeysMap.set(project.name, project.key);
@@ -38,7 +39,7 @@ allProjects((err, data) => {
 var methods = {};
 
 methods.CreateRepo = (projectName, newRepoName, planType) => {
-        request.post(
+        /*request.post(
             {
                 url: `http://localhost:7990/rest/api/latest/projects/${projectKeysMap.get(projectName)}/repos`,
                 headers: {
@@ -57,9 +58,9 @@ methods.CreateRepo = (projectName, newRepoName, planType) => {
                 console.log(`statusCode: ${res.statusCode}`);
                 console.log(body);
                 return body
-            });
+            });*/
 
-            /*request.post(
+            request.post(
                 {
                     url: `http://localhost:7990/rest/api/latest/projects/${BASE_PROJECT}/repos/${planTypesMap.get(planType)}`,
                     headers: {
@@ -78,7 +79,7 @@ methods.CreateRepo = (projectName, newRepoName, planType) => {
                     }
                     console.log(`statusCode: ${res.statusCode}`);
                     console.log(body)
-                });*/
+                });
                 return "success";
     };
 

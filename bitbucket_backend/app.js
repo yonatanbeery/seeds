@@ -9,8 +9,8 @@ app.get('/', (req, res) => {
     res.send(newPlan.data.hello());
 })
 
-app.get('/newPlan/:newRepoName', (req, res) => {
-    res.send(newPlan.data.CreateRepo("lapid", req.params.newRepoName, "planType"));
+app.get('/newPlan/:projectName/:newRepoName/:planType', (req, res) => {
+    res.send(newPlan.data.CreateRepo( req.params.projectName, req.params.newRepoName, req.params.planType));
 })
 
 app.get('/allProjects', (req, res) => {

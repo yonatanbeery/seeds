@@ -21,7 +21,7 @@ function mapStateToProps(state) {
 function BuildComponent ({Projects, setProjectsTypes}){
     useEffect(() => {
       setProjectsTypes();
-      });
+      },[]);
 
     return (
         <div class="container-fluid main">

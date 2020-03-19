@@ -39,7 +39,6 @@ methods.allProjects = (callback) => {
             return
         }
         console.log(`statusCode: ${res.statusCode}`);
-        console.log(JSON.parse(data).values)
         callback(null, JSON.parse(data).values);
     });
 };

@@ -15,8 +15,10 @@ app.get('/newPlan', (req, res) => {
 
 app.get('/allProjects', (req, res) => {
     newPlan.data.allProjects((err, data) => {
-        console.log(data);
-        res.send(data);
+        projects = data.map((project) => {return project.name})
+        console.log(projects);
+        res.header("Access-Control-Allow-Origin", "*");
+        res.send(projects);
     })
 })
 

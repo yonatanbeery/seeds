@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BitbucketInfo from "./BitbucketInfo";
 import BambooCreatePlan from "./BambooCreatePlan";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { getBitbucketProjectsTypes } from "../../actions/index";
+import { getBitbucketProjects } from "../../actions/index";
 
 function mapStateToProps(state) {
     return {
-        Projects: state.projectTypes
+        Projects: state.bitbucketProjects
     };
   }
 
   function mapDispatchToProps(dispatch) {
     return {
-        setProjectsTypes: () => dispatch(getBitbucketProjectsTypes())
+        setProjectsTypes: () => dispatch(getBitbucketProjects())
     };
   }
 
 function BuildComponent ({Projects, setProjectsTypes}){
     useEffect(() => {
-      setProjectsTypes()
-      },[]);
+      setProjectsTypes();
+      });
 
     return (
         <div class="container-fluid main">

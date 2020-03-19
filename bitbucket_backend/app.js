@@ -9,13 +9,13 @@ app.get('/', (req, res) => {
     res.send(newPlan.data.hello());
 })
 
-app.get('/newPlan', (req, res) => {
-    res.send(newPlan.data.CreateRepo());
+app.get('/newPlan/:newRepoName', (req, res) => {
+    res.send(newPlan.data.CreateRepo("lapid", req.params.newRepoName, "planType"));
 })
 
 app.get('/allProjects', (req, res) => {
     newPlan.data.allProjects((err, data) => {
-        projects = data.map((project) => {return project.name})
+        projects = data.map((project) => {return project.name});
         console.log(projects);
         res.header("Access-Control-Allow-Origin", "*");
         res.send(projects);

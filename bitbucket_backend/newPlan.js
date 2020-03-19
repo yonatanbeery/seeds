@@ -32,7 +32,7 @@ methods.hello = () => {
     return('hello')
 };
 
-methods.allProjects = () => {
+methods.allProjects = (callback) => {
     request.get({url: 'http://localhost:7990/rest/api/latest/projects'}, (error, res, data) => {
         if (error) {
             console.error(error);
@@ -40,7 +40,7 @@ methods.allProjects = () => {
         }
         console.log(`statusCode: ${res.statusCode}`);
         console.log(JSON.parse(data).values)
-        return(JSON.parse(data).values);
+        callback(null, JSON.parse(data).values);
     });
 };
 

@@ -14,7 +14,10 @@ app.get('/newPlan', (req, res) => {
 })
 
 app.get('/allProjects', (req, res) => {
-    res.send(newPlan.data.allProjects());
+    newPlan.data.allProjects((err, data) => {
+        console.log(data);
+        res.send(data);
+    })
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
